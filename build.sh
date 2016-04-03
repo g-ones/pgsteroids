@@ -21,6 +21,10 @@ docker build -t onec/postgres:9.4 -f Dockerfile.94 .
 docker build -t onec/postgres:9.5 -f Dockerfile.95 .
 popd
 
+pushd ./postgres/cluster
+docker build -t  onec/postgres-citus:5.0-9.5 -f Dockerfile.95.Citus .
+popd
+
 pushd ./pgstudio
 docker build -t onec/pgstudio:latest .
 popd
