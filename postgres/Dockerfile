@@ -33,8 +33,7 @@ RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys B97B0AFCAA1A4
 ARG PG_MAJOR
 ARG PG_VERSION
 
-ENV PG_MAJOR ${PG_MAJOR}
-ENV PG_VERSION ${PG_VERSION}
+RUN echo 'will be build pg $PG_MAJOR with version $PG_VERSION'
 
 RUN echo 'deb http://1c.postgrespro.ru/deb/ jessie main' > /etc/apt/sources.list.d/pgdg.list
 RUN wget --quiet -O - http://1c.postgrespro.ru/keys/GPG-KEY-POSTGRESPRO-1C | apt-key add -
