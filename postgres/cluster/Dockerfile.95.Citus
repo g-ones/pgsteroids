@@ -10,3 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && rm /tmp/citus*.deb \
     && apt-get purge -y --auto-remove ca-certificates wget \
     && rm -rf /var/lib/apt/lists/*
+
+COPY 000-create-symlinks-to-workers.sh 001-create-citus-extension.sql /docker-entrypoint-initdb.d/
+
+VOLUME /etc/citus
