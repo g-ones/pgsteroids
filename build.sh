@@ -18,8 +18,8 @@ popd
 
 pushd ./postgres
 
-docker build -t onec/postgres:9.4 -f Dockerfile.94
-docker build -t onec/postgres:9.5 -f Dockerfile.95
+docker build -t onec/postgres:9.4 -f Dockerfile.94 .
+docker build -t onec/postgres:9.5 -f Dockerfile.95 .
 
 popd
 
