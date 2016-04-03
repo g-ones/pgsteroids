@@ -17,10 +17,8 @@ docker build -t onec/powa-web .
 popd
 
 pushd ./postgres
-
 docker build -t onec/postgres:9.4 -f Dockerfile.94 .
 docker build -t onec/postgres:9.5 -f Dockerfile.95 .
-
 popd
 
 pushd ./pgstudio
@@ -30,6 +28,11 @@ popd
 pushd ./pgbadger
 docker build -t onec/pgbadger .
 popd
+
+pushd ./barman
+docker build -t onec/barman .
+popd
+
 
 sleep 2
 
