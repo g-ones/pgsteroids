@@ -17,13 +17,10 @@ docker build -t onec/powa-web .
 popd
 
 pushd ./postgres
-<<<<<<< HEAD
-docker build -t onec/postgres:9.4 --build-arg="PG_MAJOR=9.4 PG_VERSION=9.4.7-1.pgdg80+1" .
-docker build -t onec/postgres:9.5 --build-arg="PG_MAJOR=9.5 PG_VERSION=9.5.2-1.pgdg80+1" .
-=======
+
 docker build -t onec/postgres:9.4 -f Dockerfile.94
 docker build -t onec/postgres:9.5 -f Dockerfile.95
->>>>>>> f2c58c2fad16b179ed7611a5fc0af0483aaed1ba
+
 popd
 
 pushd ./pgstudio
